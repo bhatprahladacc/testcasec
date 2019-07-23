@@ -7,6 +7,6 @@ import cucumber.api.CucumberOptions;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="C:\\Users\\training_c2a.05.01\\eclipse-workspace\\Cucumber_space\\NewSpace\\TestCaseScenario1\\src\\test\\resources\\TestScenario_1.feature")
+@CucumberOptions(features="C:\\Users\\training_c2a.05.01\\eclipse-workspace\\Cucumber_space\\NewSpace\\TestCaseScenario1\\src\\test\\resources\\TestScenario_1.feature", plugin = {"html:target/Reports"})
 public class testrun {
 }

@@ -182,16 +182,25 @@ public class RegisterWithFactory {
 	@When("^The user Alex tries to proceed with an empty cart$")
 	public void the_user_Alex_tries_to_proceed_with_an_empty_cart() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-		if(driver.findElement(By.partialLinkText("Cart")).isDisplayed()) {
-			Assert.fail();
-		}
-	   
+		//if(driver.findElement(By.partialLinkText("Cart")).isDisplayed()) {
+		//	Assert.fail();
+		//}
+		WebDriverWait wait = new WebDriverWait(driver,100000000);
+	    wait.until(ExpectedConditions.invisibilityOfElementLocated(By.partialLinkText("Cart")));
+	     
 	}
 
 	@Then("^The The TestMeApp does not display the cart icon$")
 	public void the_The_TestMeApp_does_not_display_the_cart_icon() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-		System.out.println("The Cart function is unavailable");
+		WebDriverWait wait = new WebDriverWait(driver,1000);
+	   
+	    if(wait.until(ExpectedConditions.invisibilityOfElementLocated(By.partialLinkText("Cart")))) {
+	    	System.out.println("The Cart function is unavailable for scenario and successful");
+	    }
+	    else
+	    	Assert.fail();
+		
 		driver.close();
 	}
 	

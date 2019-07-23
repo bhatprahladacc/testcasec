@@ -1,10 +1,11 @@
 #Author: Prahlad 
 #Code: Cucumber Test Case Scenario 1
+#Test Case Scenario for Cucumber Case Study
 
 Feature: Registration Functionality with Cucumber 
-  Testing Registration of TestMeApp and also login included
+  Testing Registration of TestMeApp and also login included and other scenarios
 
-
+#Test Case Scenario 1
  Scenario: Register with valid credentials 
   
  
@@ -12,10 +13,11 @@ Feature: Registration Functionality with Cucumber
  
     When The user aheres to valid credentials which are 
     |username||firstname||lastname||password||cpassword||number||emid||addr||dtob||ansr| 
-    |theunamei13||myfname||mylname||password12||password12||9999988888||email@email.com||Dharwad, Karnataka||19/02/2003||red|
+    |theunamei20||myfname||mylname||password12||password12||9999988888||email@email.com||Dharwad, Karnataka||19/02/2003||red|
    
     Then The user is redirected to login page with success intimation
-    
+ 
+#Test Case Scenario 2    
 Scenario Outline: Login with valid credentials
 
 	 Given The User is at Login page
@@ -27,7 +29,8 @@ Scenario Outline: Login with valid credentials
 	 Examples: 
 	 |username||password|
 	 |Lalitha||Password123|  
-	 
+
+#Test Case Scenario 3	 
 Scenario: The user searches for a specific product headphone after login 
 
 	 Given The User is at home page after login
@@ -37,7 +40,8 @@ Scenario: The user searches for a specific product headphone after login
 	 			|Head|
 	 
 	 Then The user is redirected to the results of the search
-	 
+
+#Test Case Scenario 4	 
 Scenario: The user moves to cart without adding any items 
 
 	 Given The user Alex is registered into TestMeApp 
